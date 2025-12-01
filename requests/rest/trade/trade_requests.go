@@ -13,7 +13,7 @@ type (
 		ClOrdID         string           `json:"clOrdId,omitempty"`
 		Tag             string           `json:"tag,omitempty"`
 		QuickMgnType    string           `json:"quickMgnType,omitempty"`
-		ReduceOnly      string           `json:"reduceOnly,omitempty"`
+		ReduceOnly      bool             `json:"reduceOnly,string,omitempty"`
 		Sz              float64          `json:"sz,string"`
 		Px              float64          `json:"px,omitempty,string"`
 		TdMode          okx.TradeMode    `json:"tdMode"`
