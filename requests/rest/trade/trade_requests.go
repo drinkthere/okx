@@ -9,7 +9,7 @@ type (
 	PlaceOrder struct {
 		ID              string           `json:"-"`
 		InstID          string           `json:"instId,omitempty"`
-		InstIDCode      int64            `json:"instIdCode"`
+		InstIDCode      string           `json:"instIdCode"`
 		Ccy             string           `json:"ccy,omitempty"`
 		ClOrdID         string           `json:"clOrdId,omitempty"`
 		Tag             string           `json:"tag,omitempty"`
@@ -32,14 +32,14 @@ type (
 	CancelOrder struct {
 		ID         string `json:"-"`
 		InstID     string `json:"instId,omitempty"`
-		InstIDCode int64  `json:"instIdCode"`
+		InstIDCode string `json:"instIdCode"`
 		OrdID      string `json:"ordId,omitempty"`
 		ClOrdID    string `json:"clOrdId,omitempty"`
 	}
 	AmendOrder struct {
 		ID         string  `json:"-"`
 		InstID     string  `json:"instId,omitempty"`
-		InstIDCode int64   `json:"instIdCode"`
+		InstIDCode string  `json:"instIdCode"`
 		OrdID      string  `json:"ordId,omitempty"`
 		ClOrdID    string  `json:"clOrdId,omitempty"`
 		ReqID      string  `json:"reqId,omitempty"`
