@@ -4,27 +4,28 @@ import "github.com/drinkthere/okx"
 
 type (
 	Instrument struct {
-		InstID    string              `json:"instId"`
-		Uly       string              `json:"uly,omitempty"`
-		BaseCcy   string              `json:"baseCcy,omitempty"`
-		QuoteCcy  string              `json:"quoteCcy,omitempty"`
-		SettleCcy string              `json:"settleCcy,omitempty"`
-		CtValCcy  string              `json:"ctValCcy,omitempty"`
-		CtVal     okx.JSONFloat64     `json:"ctVal,omitempty"`
-		CtMult    okx.JSONFloat64     `json:"ctMult,omitempty"`
-		Stk       okx.JSONFloat64     `json:"stk,omitempty"`
-		TickSz    okx.JSONFloat64     `json:"tickSz,omitempty"`
-		LotSz     okx.JSONFloat64     `json:"lotSz,omitempty"`
-		MinSz     okx.JSONFloat64     `json:"minSz,omitempty"`
-		Lever     okx.JSONFloat64     `json:"lever"`
-		InstType  okx.InstrumentType  `json:"instType"`
-		Category  okx.FeeCategory     `json:"category,string"`
-		OptType   okx.OptionType      `json:"optType,omitempty"`
-		ListTime  okx.JSONTime        `json:"listTime"`
-		ExpTime   okx.JSONTime        `json:"expTime,omitempty"`
-		CtType    okx.ContractType    `json:"ctType,omitempty"`
-		Alias     okx.AliasType       `json:"alias,omitempty"`
-		State     okx.InstrumentState `json:"state"`
+		InstID     string              `json:"instId"`
+		Uly        string              `json:"uly,omitempty"`
+		BaseCcy    string              `json:"baseCcy,omitempty"`
+		QuoteCcy   string              `json:"quoteCcy,omitempty"`
+		SettleCcy  string              `json:"settleCcy,omitempty"`
+		CtValCcy   string              `json:"ctValCcy,omitempty"`
+		CtVal      okx.JSONFloat64     `json:"ctVal,omitempty"`
+		CtMult     okx.JSONFloat64     `json:"ctMult,omitempty"`
+		Stk        okx.JSONFloat64     `json:"stk,omitempty"`
+		TickSz     okx.JSONFloat64     `json:"tickSz,omitempty"`
+		LotSz      okx.JSONFloat64     `json:"lotSz,omitempty"`
+		MinSz      okx.JSONFloat64     `json:"minSz,omitempty"`
+		Lever      okx.JSONFloat64     `json:"lever"`
+		InstType   okx.InstrumentType  `json:"instType"`
+		Category   okx.FeeCategory     `json:"category,string"`
+		OptType    okx.OptionType      `json:"optType,omitempty"`
+		ListTime   okx.JSONTime        `json:"listTime"`
+		ExpTime    okx.JSONTime        `json:"expTime,omitempty"`
+		CtType     okx.ContractType    `json:"ctType,omitempty"`
+		Alias      okx.AliasType       `json:"alias,omitempty"`
+		State      okx.InstrumentState `json:"state"`
+		InstIDCode string              `json:"instIdCode"`
 	}
 	DeliveryExerciseHistory struct {
 		Details []*DeliveryExerciseHistoryDetails `json:"details"`

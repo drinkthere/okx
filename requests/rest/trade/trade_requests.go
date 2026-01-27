@@ -8,7 +8,8 @@ import (
 type (
 	PlaceOrder struct {
 		ID              string           `json:"-"`
-		InstID          string           `json:"instId"`
+		InstID          string           `json:"instId,omitempty"`
+		InstIDCode      int64            `json:"instIdCode"`
 		Ccy             string           `json:"ccy,omitempty"`
 		ClOrdID         string           `json:"clOrdId,omitempty"`
 		Tag             string           `json:"tag,omitempty"`
@@ -29,20 +30,22 @@ type (
 		SlTriggerPxType string           `json:"slTriggerPxType,omitempty"`
 	}
 	CancelOrder struct {
-		ID      string `json:"-"`
-		InstID  string `json:"instId"`
-		OrdID   string `json:"ordId,omitempty"`
-		ClOrdID string `json:"clOrdId,omitempty"`
+		ID         string `json:"-"`
+		InstID     string `json:"instId,omitempty"`
+		InstIDCode int64  `json:"instIdCode"`
+		OrdID      string `json:"ordId,omitempty"`
+		ClOrdID    string `json:"clOrdId,omitempty"`
 	}
 	AmendOrder struct {
-		ID        string  `json:"-"`
-		InstID    string  `json:"instId"`
-		OrdID     string  `json:"ordId,omitempty"`
-		ClOrdID   string  `json:"clOrdId,omitempty"`
-		ReqID     string  `json:"reqId,omitempty"`
-		NewSz     float64 `json:"newSz,omitempty,string"`
-		NewPx     float64 `json:"newPx,omitempty,string"`
-		CxlOnFail bool    `json:"cxlOnFail,omitempty"`
+		ID         string  `json:"-"`
+		InstID     string  `json:"instId,omitempty"`
+		InstIDCode int64   `json:"instIdCode"`
+		OrdID      string  `json:"ordId,omitempty"`
+		ClOrdID    string  `json:"clOrdId,omitempty"`
+		ReqID      string  `json:"reqId,omitempty"`
+		NewSz      float64 `json:"newSz,omitempty,string"`
+		NewPx      float64 `json:"newPx,omitempty,string"`
+		CxlOnFail  bool    `json:"cxlOnFail,omitempty"`
 	}
 	ClosePosition struct {
 		InstID  string           `json:"instId"`
