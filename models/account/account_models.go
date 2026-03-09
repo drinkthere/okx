@@ -186,13 +186,9 @@ type (
 		Side    okx.OrderSide   `json:"side"`
 	}
 	FeeGroupItem struct {
-		GroupId   string          `json:"groupId"`
-		Maker     okx.JSONFloat64 `json:"maker"`
-		Taker     okx.JSONFloat64 `json:"taker"`
-		MakerU    okx.JSONFloat64 `json:"makerU"`
-		TakerU    okx.JSONFloat64 `json:"takerU"`
-		MakerUSDC okx.JSONFloat64 `json:"makerUSDC"`
-		TakerUSDC okx.JSONFloat64 `json:"takerUSDC"`
+		GroupId string          `json:"groupId"`
+		Maker   okx.JSONFloat64 `json:"maker"`
+		Taker   okx.JSONFloat64 `json:"taker"`
 	}
 	Fee struct {
 		Level     string             `json:"level"`
