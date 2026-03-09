@@ -185,6 +185,15 @@ type (
 		MgnMode okx.MarginMode  `json:"mgnMode"`
 		Side    okx.OrderSide   `json:"side"`
 	}
+	FeeGroupItem struct {
+		GroupId   string          `json:"groupId"`
+		Maker     okx.JSONFloat64 `json:"maker"`
+		Taker     okx.JSONFloat64 `json:"taker"`
+		MakerU    okx.JSONFloat64 `json:"makerU"`
+		TakerU    okx.JSONFloat64 `json:"takerU"`
+		MakerUSDC okx.JSONFloat64 `json:"makerUSDC"`
+		TakerUSDC okx.JSONFloat64 `json:"takerUSDC"`
+	}
 	Fee struct {
 		Level     string             `json:"level"`
 		Taker     okx.JSONFloat64    `json:"taker"`
@@ -194,10 +203,16 @@ type (
 		Category  okx.FeeCategory    `json:"category,string"`
 		InstType  okx.InstrumentType `json:"instType"`
 		TakerU    okx.JSONFloat64    `json:"takerU"`
-		MakerU    okx.JSONFloat64    `json:"MakerU"`
+		MakerU    okx.JSONFloat64    `json:"makerU"`
 		TakerUSDC okx.JSONFloat64    `json:"takerUSDC"`
 		MakerUSDC okx.JSONFloat64    `json:"makerUSDC"`
+		FeeGroup  []*FeeGroupItem    `json:"feeGroup,omitempty"`
 		TS        okx.JSONTime       `json:"ts"`
+	}
+	AccountInstrument struct {
+		InstType okx.InstrumentType `json:"instType"`
+		InstId   string             `json:"instId"`
+		GroupId  string             `json:"groupId"`
 	}
 	InterestAccrued struct {
 		InstID       string          `json:"instId"`

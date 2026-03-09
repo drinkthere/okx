@@ -279,6 +279,24 @@ func (c *Account) GetMaxLoan(req requests.GetMaxLoan) (response responses.GetMax
 	return
 }
 
+// GetAccountInstruments
+// Retrieve the instrument information of the account, including groupId for fee rate lookup.
+//
+// https://www.okx.com/docs-v5/en/#trading-account-rest-api-get-instruments
+func (c *Account) GetAccountInstruments(req requests.GetAccountInstruments) (response responses.GetAccountInstruments, err error) {
+	p := "/api/v5/account/instruments"
+	m := okx.S2M(req)
+	res, err := c.client.Do(http.MethodGet, p, true, m)
+	if err != nil {
+		return
+	}
+	defer res.Body.Close()
+	d := json.NewDecoder(res.Body)
+	err = d.Decode(&response)
+
+	return
+}
+
 // GetFeeRates
 //
 // https://www.okx.com/docs-v5/en/#rest-api-account-get-fee-rates

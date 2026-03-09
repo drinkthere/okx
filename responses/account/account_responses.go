@@ -54,6 +54,10 @@ type (
 		responses.Basic
 		Fees []*models.Fee `json:"data"`
 	}
+	GetAccountInstruments struct {
+		responses.Basic
+		Instruments []*models.AccountInstrument `json:"data"`
+	}
 	GetInterestAccrued struct {
 		responses.Basic
 		InterestAccrues []*models.InterestAccrued `json:"data"`

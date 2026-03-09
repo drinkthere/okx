@@ -68,6 +68,11 @@ type (
 		Category okx.FeeCategory    `json:"category,omitempty,string"`
 		InstType okx.InstrumentType `json:"instType"`
 	}
+	GetAccountInstruments struct {
+		InstType okx.InstrumentType `json:"instType"`
+		InstId   string             `json:"instId,omitempty"`
+		Uly      string             `json:"uly,omitempty"`
+	}
 	GetInterestAccrued struct {
 		InstID  string         `json:"instId,omitempty"`
 		Ccy     string         `json:"ccy,omitempty"`
